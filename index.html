@@ -15,7 +15,7 @@ function init(){
 	console.log('Browser supports...');
 	alert('Browser supports...');
 	
-	 navigator.serviceWorker.register('/gh-pages/sw.js', { scope: '/' }).then(serviceWorkerRegSuccessHandler).catch(function(error) {
+	 navigator.serviceWorker.register('/gh-pages/sw.js', { scope: '/gh-pages/' }).then(serviceWorkerRegSuccessHandler).catch(function(error) {
 		    // registration failed
 		    console.log('Registration failed with ' + error);
 		    alert('Registration failed with ' + error);
