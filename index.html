@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <title>Index File</title>
 <script type="text/javascript">
-if ('serviceWorker' in navigator) {
-	console.log('Browser supports...');
-	alert('Browser supports...');
-	  }else{
-		    console.log('Browser does not support...');
-		    alert('Browser does not support...');
-	  }
-// 	};
+
+
+if ('serviceWorker' in navigator == false) {
+    console.log('Browser does not support...');
+    alert('Browser does not support...');
+	return;	
+}
+console.log('Browser supports...');
+alert('Browser supports...');
 </script>
 </head>
 <body>
