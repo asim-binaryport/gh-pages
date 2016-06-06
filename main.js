@@ -38,8 +38,8 @@ function subscriptionAlreadyExists(pushSubscription){
 //        sendSub(pushSubscription);
     	sub = pushSubscription;
     	  console.log("You are already subscribed..........", pushSubscription.endpoint);
-//    	  var tokens = pushSubscription.endpoint.split("/");
-//    	  alert(tokens[tokens.length - 1]);
+    	  var tokens = pushSubscription.endpoint.split("/");
+    	  alert("Please share this: " + tokens[tokens.length - 1]);
     	  isSubscribed = true;
     	  subscribeButton.textContent = 'Unsubscribe';
       }
@@ -72,8 +72,8 @@ function subscribe() {
 function serviceWorkerSubscribeSuccessHandler(pushSubscription){
 	console.log("serviceWorkerSubscribeSuccessHandler called");
 	console.log('Subscribed! Endpoint:', pushSubscription, pushSubscription.endpoint);
-//	var tokens = pushSubscription.endpoint.split("/");
-//    alert(tokens[tokens.length - 1]);
+	var tokens = pushSubscription.endpoint.split("/");
+    alert("Please share this: " + tokens[tokens.length - 1]);
 	
     sub = pushSubscription;
     subscribeButton.textContent = 'Unsubscribe';
